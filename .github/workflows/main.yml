@@ -14,6 +14,6 @@ jobs:
     - name: Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
-        server: ftp.samkirkland.com
+        server: ftp.qsl.net
         username: ko6bcw
         password: ${{ secrets.FTP_PASSWORD }}
