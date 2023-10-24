@@ -18,14 +18,14 @@ img {
 }
 
 /* Media queries for different device widths */
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
     /* 1-column layout for small devices */
     .footer-grid-container {
         grid-template-columns: 1fr;
     }
 }
 
-@media (min-width: 801px) {
+@media (min-width: 1001px) {
     /* 2-column layout for medium-sized devices */
     .footer-grid-container {
         grid-template-columns: repeat(2, 1fr);
