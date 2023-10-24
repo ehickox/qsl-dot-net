@@ -8,3 +8,26 @@ img {
     max-width: 100%;
     max-height: 100%;
 }
+
+.footer-grid-container {
+  display: grid;
+}
+
+.footer-grid-item {
+    padding: 10px;
+}
+
+/* Media queries for different device widths */
+@media (max-width: 800px) {
+    /* 1-column layout for small devices */
+    .footer-grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 801px) {
+    /* 2-column layout for medium-sized devices */
+    .footer-grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
