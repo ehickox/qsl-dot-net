@@ -4,9 +4,41 @@ body {
     background-color: black;
 }
 
+/* unvisited link */
+a:link {
+    color: #3366CC;
+}
+  
+/* visited link */
+a:visited {
+color: #6600FF;
+}
+
+/* mouse over link */
+a:hover {
+color: #3366CC;
+}
+
+/* selected link */
+a:active {
+color: #3366CC;
+}
+
+
 img {
     max-width: 100%;
     max-height: 100%;
+}
+
+table, th, td {
+    border: 1px solid white;
+}
+
+.reference-grid-container {
+    display: grid;
+}
+.reference-grid-item {
+    padding: 2px;
 }
 
 .footer-grid-container {
@@ -28,6 +60,21 @@ img {
 @media (min-width: 1001px) {
     /* 2-column layout for medium-sized devices */
     .footer-grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Reference Grids */
+@media (max-width: 800px) {
+    /* 1-column layout for small devices */
+    .reference-grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 801px) {
+    /* 2-column layout for medium-sized devices */
+    .reference-grid-container {
         grid-template-columns: repeat(2, 1fr);
     }
 }
