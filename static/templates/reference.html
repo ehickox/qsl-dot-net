@@ -1,16 +1,5 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>KO6BCW</title>
-        <meta charset="utf-8">
-        <meta name="robots" content="INDEX, FOLLOW">
-        <link rel="stylesheet" href="static/css/normalize.css">
-        <link rel="stylesheet" href="static/css/main.css">
-    </head>
-    <body>
-        <h1>KO6BCW Eli Hickox</h1>
-
-
+{% extends 'base.html' %}
+{% block body %}
 <h2>Reference Charts </h2>
 <p>These are some convenient charts I use to reference nets and digital rooms I like to frequent, and how I like to access them. I use a Yaesu radio with a Pi-Star Hotspot. You may be able to access these rooms and nets differently.</p>
 <h3>Nets</h3>
@@ -137,27 +126,4 @@
 </div>
 
 <p><a href="index.html">Home</a></p>
-
-
-        <footer>
-            <hr></hr>
-            <div class="footer-grid-container">
-                <div class="footer-grid-item">
-                    <p>
-                        <a href="https://www.qrz.com/db/KO6BCW">My QRZ.com profile</a>
-                    </p>
-                    <p>
-                        This website is on <a href="https://github.com/ehickox/qsl-dot-net">Github</a>.
-                    </p>
-                    <p>
-                        © 2023 - 2024 Copyright: <a href="https://elihickox.com">Eli Hickox</a>
-                    </p>
-                </div>
-                <div class="footer-grid-item">
-                    <a href="https://www.hamqsl.com/solar.html" title="Click to add Solar-Terrestrial Data to your website!"><img src="https://www.hamqsl.com/solar101vhfpic.php"></a>
-                </div>
-            </div>
-            <hr></hr>
-        </footer>
-    </body>
-</html>
+{% endblock %}

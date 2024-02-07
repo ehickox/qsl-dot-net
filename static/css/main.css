@@ -1,14 +1,15 @@
 body {
-    font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
     color: white;
     background-color: black;
+    margin: 8px;
 }
 
 /* unvisited link */
 a:link {
     color: #3366CC;
 }
-  
+
 /* visited link */
 a:visited {
 color: #6600FF;
