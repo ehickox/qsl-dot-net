@@ -2,6 +2,7 @@ body {
     font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
     color: white;
     background-color: black;
+    margin: 8px;
 }
 
 /* unvisited link */
