@@ -30,6 +30,10 @@ img {
     max-width: 100%;
     max-height: 100%;
 }
+.qsl-card-img {
+    max-width: 900px;
+    max-height: 500px;
+}
 
 table, th, td {
     border: 1px solid white;
