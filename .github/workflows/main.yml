@@ -1,4 +1,4 @@
-on: 
+on:
   push:
     branches:
       - master
@@ -10,10 +10,10 @@ jobs:
     steps:
     - name: Get latest code
       uses: actions/checkout@v3
-    
+
     - name: Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
         server: ftp.qsl.net
-        username: ko6bcw
+        username: k6bcw
         password: ${{ secrets.FTP_PASSWORD }}
