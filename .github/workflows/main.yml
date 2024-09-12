@@ -14,7 +14,6 @@ jobs:
     - name: Get latest code
       uses: actions/checkout@v4
       with:
-        fetch-depth: 0
         lfs: 'true'
 
     - name: setup python
@@ -31,19 +30,7 @@ jobs:
     - name: Render HTML Templates
       run: pipenv run python render_templates.py
 
-    - name: Commit Files
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add -A
-        git commit -m "chore: render templates" -a
-
-    - name: Push Changes
-      uses: ad-m/github-push-action@v0.8.0
-      with:
-        branch: master
-
-    - name: Sync files
+    - name: Upload to FTP
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         server: ftp.qsl.net
