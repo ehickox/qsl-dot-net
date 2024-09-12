@@ -11,12 +11,13 @@ jobs:
     - name: Get latest code
       uses: actions/checkout@v4
       with:
+        fetch-depth: 0
         lfs: 'true'
 
     - name: setup python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v4
       with:
-        python-version: '3.11.7'
+        python-version: '3.11'
 
     - name: Install dependencies
       run: |
