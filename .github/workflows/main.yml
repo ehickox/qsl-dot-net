@@ -13,6 +13,12 @@ jobs:
       with:
         lfs: 'true'
 
+    - name: Check out hamdash
+      uses: actions/checkout@v4
+      with:
+        repository: ehickox/hamdash
+        path: hamdash
+
     - name: setup python
       uses: actions/setup-python@v4
       with:
