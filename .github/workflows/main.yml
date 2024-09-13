@@ -16,8 +16,8 @@ jobs:
     - name: Check out hamdash
       uses: actions/checkout@v4
       with:
-        repository: ehickox/hamdash
-        path: hamdash
+        repository: ehickox/hamdashboard
+        path: hamdashboard
 
     - name: setup python
       uses: actions/setup-python@v4
