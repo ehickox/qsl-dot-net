@@ -6,11 +6,11 @@ body {
 }
 
 a:link {
-    color: #66B2FF;  /* Lighter blue for better contrast on dark backgrounds */
+    color: #1D9BF0;  /* Lighter blue for better contrast on dark backgrounds */
 }
 
 a:visited {
-    color: #B088FF;  /* Lighter purple for better contrast on dark backgrounds */
+    color: #1D9BF0;  /* Lighter purple for better contrast on dark backgrounds */
 }
 
 a:hover {
