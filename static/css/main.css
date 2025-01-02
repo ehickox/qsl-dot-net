@@ -5,16 +5,20 @@ body {
     margin: 8px;
 }
 
+a {
+  text-decoration: none; /* Remove underline by default */
+}
+
 a:link {
     color: #1D9BF0;  /* Lighter blue for better contrast on dark backgrounds */
 }
 
 a:visited {
-    color: #1D9BF0;  /* Lighter purple for better contrast on dark backgrounds */
+    color: #1D9BF0;  /* Lighter blue for better contrast on dark backgrounds */
 }
 
 a:hover {
-    color: #99CCFF;  /* Even lighter blue for hover state */
+    text-decoration: underline;
 }
 
 a:active {
