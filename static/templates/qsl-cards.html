@@ -1,40 +1,62 @@
 {% extends 'base.html' %}
+
 {% block body %}
 
-<h3>QSL Page</h3>
+<h1>QSL Cards</h1>
 <p>
-    I prefer LoTW, however I also have QRZ.com and e-QSL. Here's a page containing some QSL cards I've received and some POTA stats.
+    I prefer LoTW, but also maintain logs on QRZ.com and e-QSL. 
+    I have printed my own QSL cards and will respond to all physical QSL cards with one of my own.
 </p>
-<h2>QRZ.com Logbook</h2>
-<iframe align="top" frameborder="0" height="500" scrolling="yes" style="background-color: white;" src="https://logbook.qrz.com/lbstat/K6BCW/" width="650"></iframe>
 
-<h2 id="pota">POTA Stats</h2>
-<iframe src="https://pota-stats.wd4dan.net/?call=K6BCW" height="1250" width="1000" frameborder="0" scrolling="no"></iframe>
+<h2>Stats</h2>
+<!-- Stacked vertically -->
+<div style="margin-bottom: 3rem;">
+    <div style="margin-bottom: 3rem;">
+        <h3>QRZ.com Logbook</h3>
+        <iframe align="top" frameborder="0" height="500" scrolling="yes" style="background-color: white; max-width: 100%;" src="https://logbook.qrz.com/lbstat/K6BCW/" width="100%"></iframe>
+    </div>
+    <div>
+        <h3 id="pota">POTA Stats</h3>
+        <iframe src="https://pota-stats.wd4dan.net/?call=K6BCW" height="1250" width="100%" frameborder="0" scrolling="no"></iframe>
+    </div>
+</div>
 
-<h2>QSL Cards</h2>
-<h3>Here are some QSL cards I've collected.</h3>
-<p>I have now printed some of my own QSL cards. I'll respond to all physical QSL cards with my own QSL card.</p>
+<h2>Card Gallery</h2>
+<div class="card-grid">
+    <div class="card-item">
+        <p>JA6WFM</p>
+        <img src="static/img/qsl-ja6wfm.webp" alt="QSL card from JA6WFM" loading="lazy">
+    </div>
+    
+    <div class="card-item">
+        <p>KL5DX Alaska Contest Club</p>
+        <img src="static/img/qsl-kl5dx.webp" alt="QSL card from KL5DX" loading="lazy">
+    </div>
+    
+    <div class="card-item">
+        <p>K6DF</p>
+        <img src="static/img/QSL-K6DF.webp" alt="QSL card from K6DF" loading="lazy">
+    </div>
+    
+    <div class="card-item">
+        <p>KD4UTL</p>
+        <img src="static/img/QSL-KD4UTL.webp" alt="QSL card from KD4UTL" loading="lazy">
+    </div>
+    
+    <div class="card-item">
+        <p>W6BSD</p>
+        <img src="static/img/QSL-W6BSD.webp" alt="QSL card from W6BSD" loading="lazy">
+    </div>
+    
+    <div class="card-item">
+        <p>W6P (SFARC OTA-Trifecta 2023)</p>
+        <img src="static/img/QSL-W6P.webp" alt="QSL card from W6P" loading="lazy">
+    </div>
+    
+    <div class="card-item">
+        <p>N6LRC</p>
+        <img src="static/img/QSL-N6LRC.webp" alt="QSL card from N6LRC" loading="lazy">
+    </div>
+</div>
 
-<p>A QSL Card from JA6WFM</p>
-<img src="static/img/qsl-ja6wfm.webp" class="qsl-card-img" alt="QSL card from JA6WFM">
-
-<p>A QSL Card from KL5DX Alaska Contest Club</p>
-<img src="static/img/qsl-kl5dx.webp" class="qsl-card-img" alt="QSL card from KL5DX">
-
-<p>A QSL Card from K6DF</p>
-<img src="static/img/QSL-K6DF.webp" class="qsl-card-img" alt="QSL card from K6DF">
-
-<p>Here is a QSL Card from KD4UTL.</p>
-<img src="static/img/QSL-KD4UTL.webp" class="qsl-card-img" alt="QSL card from KD4UTL">
-
-<p>A QSL Card from W6BSD.</p>
-<img src="static/img/QSL-W6BSD.webp" class="qsl-card-img" alt="QSL card from W6BSD">
-
-<p>Here is one from W6P obtained from the SFARC OTA-Trifecta event in 2023.</p>
-<img src="static/img/QSL-W6P.webp" class="qsl-card-img" alt="QSL card from W6P">
-
-<p>Here is one from N6LRC</p>
-<img src="static/img/QSL-N6LRC.webp" class="qsl-card-img" alt="QSL card from N6LRC">
-
-<p><a href="index.html">Home</a></p>
 {% endblock %}

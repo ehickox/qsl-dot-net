@@ -9,15 +9,29 @@
         <meta name="author" content="Eli Hickox">
         <meta name="keywords" content="k6bcw, eli hickox, amateur radio, ham radio">
         <meta name="viewport" content="width=device-width">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="static/css/normalize.css">
         <link rel="stylesheet" href="static/css/main.css">
     </head>
     <body>
-        <h1>K6BCW Eli Hickox</h1>
+        <nav class="site-nav">
+            <a href="index.html" class="nav-brand">K6BCW</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="https://www.ehlabs.net/blog/u/eli?tags=radio">Blog</a></li>
+                <li><a href="qsl-cards.html">QSL Cards</a></li>
+                <li><a href="reference.html">Reference</a></li>
+                <li><a href="satellites.html">Satellites</a></li>
+                <li><a href="hamdashboard/hamdash.html">Dashboard</a></li>
+            </ul>
+        </nav>
 
-        {% block body%}
-        {% endblock %}
-
+        <main class="container">
+            {% block body%}
+            {% endblock %}
+        </main>
 
         <footer>
             <hr></hr>
