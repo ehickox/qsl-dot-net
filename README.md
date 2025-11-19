@@ -1,5 +1,7 @@
 # QSL.net webpage for K6BCW
 
-[<img alt="Deployed with FTP Deploy Action" src="https://img.shields.io/badge/Deployed With-FTP DEPLOY ACTION-%3CCOLOR%3E?style=for-the-badge&color=0077b6">](https://github.com/SamKirkland/FTP-Deploy-Action)
+![License](https://img.shields.io/badge/license-UIUC%2FNCSA-orange.svg)
+![Python](https://img.shields.io/badge/python-3.13+-blue.svg)
+[![Deployed with FTP Deploy Action](https://img.shields.io/badge/Deployed%20With-FTP%20Deploy%20Action-blue.svg)](https://github.com/SamKirkland/FTP-Deploy-Action)
 
 This is my website for [QSL.net](https://qsl.net/k6bcw)
