@@ -4,3 +4,6 @@
 .DS_Store
 
 hamdashboard/
+
+# Python virtual environment
+.venv/
