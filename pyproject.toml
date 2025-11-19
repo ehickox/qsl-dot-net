@@ -2,7 +2,7 @@
 name = "qsl-dot-net"
 version = "0.1.0"
 description = "QSL.net webpage for K6BCW"
-requires-python = ">=3.11"
+requires-python = ">=3.13"
 dependencies = [
     "jinja2>=3.1.3",
 ]
