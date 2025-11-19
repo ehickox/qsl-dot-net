@@ -36,10 +36,12 @@ jobs:
       run: uv run python render_templates.py
 
     - name: Upload to FTP
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.6
       with:
         server: ftp.qsl.net
         username: k6bcw
         password: ${{ secrets.FTP_PASSWORD }}
         exclude: |
           .venv/
+          .git/
+          hamdashboard/.git/
