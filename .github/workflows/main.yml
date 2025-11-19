@@ -41,6 +41,7 @@ jobs:
         server: ftp.qsl.net
         username: k6bcw
         password: ${{ secrets.FTP_PASSWORD }}
+        dangerous-clean-slate: true
         exclude: |
           .venv/
           .git/
