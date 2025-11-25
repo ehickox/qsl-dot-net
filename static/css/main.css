@@ -105,7 +105,8 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 10px 20px;
 }
 
 nav li {
@@ -115,6 +116,16 @@ nav li {
 nav a {
     font-size: 1.2em;
     font-weight: 500;
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        gap: 8px 16px;
+    }
+    
+    nav a {
+        font-size: 1.1em;
+    }
 }
 
 h1 {
