@@ -177,3 +177,365 @@ h3 {
     font-size: 0.9em;
     color: #cccccc;
 }
+
+/* Antenna Calculator Styles */
+.antenna-calculator {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    border: 1px solid #2a2a2a;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 6px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+.calculator-intro {
+    font-size: 1.05em;
+    line-height: 1.5;
+    color: #cccccc;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.calculator-header {
+    margin-bottom: 20px;
+}
+
+.calculator-description h4 {
+    color: #ffffff;
+    margin-bottom: 8px;
+    font-size: 1.2em;
+}
+
+.calculator-description p {
+    color: #aaaaaa;
+    line-height: 1.5;
+}
+
+.calculator-description .unun-note {
+    color: #888;
+    font-size: 0.9em;
+    border-left: 3px solid #0066cc;
+    padding-left: 12px;
+    margin-top: 12px;
+    font-style: italic;
+}
+
+.calculator-controls {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.control-section {
+    background-color: #111;
+    padding: 15px;
+    border-radius: 4px;
+    border: 1px solid #222;
+}
+
+.control-section h5 {
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.band-presets {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.preset-btn {
+    background-color: #2a2a2a;
+    color: #cccccc;
+    border: 1px solid #444;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 0.9em;
+    transition: all 0.2s ease;
+}
+
+.preset-btn:hover {
+    background-color: #3a3a3a;
+    border-color: #555;
+    color: #ffffff;
+}
+
+.preset-btn.active {
+    background-color: #0066cc;
+    border-color: #0066cc;
+    color: #ffffff;
+}
+
+.band-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.band-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 0;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.band-option:hover {
+    color: #ffffff;
+}
+
+.band-option input[type="checkbox"] {
+    margin: 0;
+    accent-color: #0066cc;
+}
+
+.band-option span {
+    font-weight: 500;
+    color: #cccccc;
+}
+
+.band-option small {
+    color: #888;
+    font-size: 0.8em;
+}
+
+.length-input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.length-input-group input {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border: 1px solid #444;
+    padding: 10px 12px;
+    border-radius: 4px;
+    font-size: 1em;
+    width: 80px;
+    text-align: center;
+    transition: border-color 0.2s ease;
+}
+
+.length-input-group input:focus {
+    outline: none;
+    border-color: #0066cc;
+    box-shadow: 0 0 0 2px rgba(0, 102, 204, 0.2);
+}
+
+.length-input-group label {
+    color: #cccccc;
+    font-size: 0.9em;
+}
+
+.input-help {
+    color: #888;
+    font-size: 0.85em;
+    margin: 0;
+    font-style: italic;
+}
+
+.calculator-results {
+    background-color: #111;
+    border: 1px solid #222;
+    border-radius: 4px;
+    padding: 15px;
+}
+
+.results-header {
+    margin-bottom: 15px;
+}
+
+.results-header h5 {
+    color: #ffffff;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+}
+
+.results-header p {
+    color: #aaaaaa;
+    line-height: 1.5;
+}
+
+.chart-container {
+    background-color: #000;
+    border: 1px solid #333;
+    border-radius: 3px;
+    margin: 15px 0;
+    padding: 10px;
+    overflow-x: auto;
+}
+
+#antennaChart {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 320px;
+}
+
+.chart-legend {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #333;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9em;
+    color: #cccccc;
+}
+
+.legend-indicator {
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    border: 2px solid #555;
+}
+
+.legend-indicator.problematic {
+    background-color: #ff4444;
+    border-color: #ff4444;
+}
+
+.legend-indicator.optimal {
+    background-color: #44aa44;
+    border-color: #44aa44;
+}
+
+.legend-indicator.current-line {
+    background-color: transparent;
+    border-color: #00ff00;
+    position: relative;
+}
+
+.legend-indicator.current-line::after {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 2px;
+    width: 12px;
+    height: 2px;
+    background-color: #00ff00;
+}
+
+.analysis-summary {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #0a0a0a;
+    border-radius: 4px;
+    border-left: 3px solid #0066cc;
+}
+
+.analysis-summary p {
+    color: #cccccc;
+    margin: 0;
+    font-size: 0.95em;
+}
+
+.analysis-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.analysis-good {
+    color: #44aa44;
+    background-color: rgba(68, 170, 68, 0.1);
+    padding: 8px 12px;
+    border-radius: 4px;
+    border-left: 3px solid #44aa44;
+    font-size: 0.95em;
+}
+
+.analysis-warning {
+    color: #ffaa44;
+    background-color: rgba(255, 170, 68, 0.1);
+    padding: 8px 12px;
+    border-radius: 4px;
+    border-left: 3px solid #ffaa44;
+    font-size: 0.95em;
+}
+
+.analysis-recommendation {
+    color: #cccccc;
+    background-color: rgba(102, 102, 102, 0.1);
+    padding: 8px 12px;
+    border-radius: 4px;
+    border-left: 3px solid #666;
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+/* Responsive design for antenna calculator */
+@media (max-width: 900px) {
+    .calculator-controls {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .antenna-calculator {
+        padding: 15px;
+        margin: 15px 0;
+    }
+
+    .calculator-intro {
+        font-size: 1em;
+        margin-bottom: 15px;
+    }
+
+    .band-grid {
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
+
+    .band-presets {
+        flex-direction: column;
+        gap: 6px;
+        margin-bottom: 15px;
+    }
+
+    .preset-btn {
+        width: 100%;
+        padding: 6px 12px;
+        font-size: 0.9em;
+    }
+
+    .control-section {
+        padding: 12px;
+    }
+
+    .chart-legend {
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+        padding-top: 10px;
+    }
+
+    .calculator-results {
+        padding: 12px;
+    }
+
+    .chart-container {
+        margin: 12px 0;
+        padding: 8px;
+    }
+
+    #antennaChart {
+        max-height: 280px;
+    }
+}

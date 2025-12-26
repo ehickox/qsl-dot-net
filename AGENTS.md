@@ -1,0 +1,1 @@
+This is a static website designed to be deployed on an FTP server. To render the templates, run `uv run render_templates.py`.

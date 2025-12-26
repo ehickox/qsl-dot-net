@@ -161,5 +161,86 @@
 <p><a href="https://zone-check.eu">Zone Check (Gridsquare Locator)</a></p>
 <p><a href="https://www.b4h.net/cabforms/">Cabrillo Contest Log Formatter</a></p>
 
+<h3 id="antenna-calculator">End-Fed Random Wire Antenna Calculator</h3>
+<p class="calculator-intro">Determine optimal wire lengths for end-fed random wire antennas used with a 9:1 unun across multiple amateur bands. This tool analyzes wavelength harmonics to identify lengths that provide efficient multi-band operation with proper impedance matching.</p>
+
+<div class="antenna-calculator">
+    <div class="calculator-header">
+        <div class="calculator-description">
+            <h4>Analysis Parameters</h4>
+            <p>Select the amateur bands you plan to operate and enter your proposed random wire length. The 9:1 unun transforms the high impedance of the end-fed wire (typically 200-5000 ohms) to approximately 50 ohms for your transceiver. Red regions indicate lengths that may cause excessive impedance mismatch beyond the unun's capability.</p>
+            <p class="unun-note"><em>Note: This calculator is specifically designed for end-fed random wire antennas used with 9:1 ununs. Results may not apply to other antenna matching configurations.</em></p>
+        </div>
+    </div>
+
+    <div class="calculator-controls">
+        <div class="control-section">
+            <h5>Band Selection</h5>
+            <div class="band-presets">
+                <button class="preset-btn" onclick="selectAllBands()">All Bands</button>
+                <button class="preset-btn active" onclick="selectBands(['40M', '20M', '15M', '10M'])">HF (40-10M)</button>
+                <button class="preset-btn" onclick="clearBands()">Clear All</button>
+            </div>
+
+            <div class="band-grid">
+                <label class="band-option"><input type="checkbox" id="160M" onchange="updateChart()"> <span>160M</span> <small>1.8-2.0 MHz</small></label>
+                <label class="band-option"><input type="checkbox" id="80M" onchange="updateChart()"> <span>80M</span> <small>3.5-4.0 MHz</small></label>
+                <label class="band-option"><input type="checkbox" id="60M" onchange="updateChart()"> <span>60M</span> <small>5.3-5.4 MHz</small></label>
+                <label class="band-option"><input type="checkbox" id="40M" onchange="updateChart()"> <span>40M</span> <small>7.0-7.3 MHz</small></label>
+                <label class="band-option"><input type="checkbox" id="30M" onchange="updateChart()"> <span>30M</span> <small>10.1-10.15 MHz</small></label>
+                <label class="band-option"><input type="checkbox" id="20M" onchange="updateChart()"> <span>20M</span> <small>14.0-14.35 MHz</small></label>
+                <label class="band-option"><input type="checkbox" id="17M" onchange="updateChart()"> <span>17M</span> <small>18.068-18.168 MHz</small></label>
+                <label class="band-option"><input type="checkbox" id="15M" onchange="updateChart()"> <span>15M</span> <small>21.0-21.45 MHz</small></label>
+                <label class="band-option"><input type="checkbox" id="12M" onchange="updateChart()"> <span>12M</span> <small>24.89-24.99 MHz</small></label>
+                <label class="band-option"><input type="checkbox" id="10M" onchange="updateChart()"> <span>10M</span> <small>28.0-29.7 MHz</small></label>
+                <label class="band-option"><input type="checkbox" id="6M" onchange="updateChart()"> <span>6M</span> <small>50.0-54.0 MHz</small></label>
+            </div>
+        </div>
+
+        <div class="control-section">
+            <h5>Antenna Length</h5>
+            <div class="length-input-group">
+                <input type="number" id="wireLength" min="1" max="150" value="66" onchange="updateChart()" step="1">
+                <label for="wireLength">feet</label>
+            </div>
+            <p class="input-help">Enter your planned antenna length (1-150 feet)</p>
+        </div>
+    </div>
+
+    <div class="calculator-results">
+        <div class="results-header">
+            <h5>End-Fed Antenna Performance Analysis</h5>
+            <p>The chart below shows optimal wire lengths for end-fed random antennas with 9:1 ununs. Red regions indicate lengths that may cause excessive impedance mismatch, potentially exceeding the 9:1 unun's transformation capability.</p>
+        </div>
+
+        <div class="chart-container">
+            <svg id="antennaChart" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid meet">
+                <!-- Chart will be drawn here by JavaScript -->
+            </svg>
+        </div>
+
+        <div class="chart-legend">
+            <div class="legend-item">
+                <div class="legend-indicator problematic"></div>
+                <span>High Impedance Regions</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-indicator optimal"></div>
+                <span>Optimal Length Ranges</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-indicator current-line"></div>
+                <span>Your Selected Length</span>
+            </div>
+        </div>
+
+        <div class="analysis-summary" id="analysisSummary">
+            <p>Select bands and enter a length to see performance analysis.</p>
+        </div>
+    </div>
+</div>
+
 <p><a href="index.html">Home</a></p>
+
+<script src="static/js/antenna-calculator.js"></script>
 {% endblock %}
