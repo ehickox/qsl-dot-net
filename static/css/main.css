@@ -1,11 +1,51 @@
+@font-face {
+    font-family: "Apple Garamond";
+    src: url("../fonts/AppleGaramond.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Apple Garamond";
+    src: url("../fonts/AppleGaramond-Italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Apple Garamond";
+    src: url("../fonts/AppleGaramond-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Apple Garamond";
+    src: url("../fonts/AppleGaramond-BoldItalic.ttf") format("truetype");
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Apple Garamond";
+    src: url("../fonts/AppleGaramond-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
 body {
-    font-family: 'EB Garamond', Georgia, 'Times New Roman', serif;
+    font-family: "Apple Garamond", Georgia, "Times New Roman", serif;
     color: white;
     background-color: black;
     margin: 0 auto;
     max-width: 1200px;
     padding: 20px;
-    font-size: 1.1em;
+    font-size: 1.15em;
     letter-spacing: -0.01em;
 }
 
@@ -91,7 +131,7 @@ table, th, td {
 
 /* Adding heading styles for better hierarchy and retro feel */
 h1, h2, h3 {
-    font-weight: 700;
+    font-weight: 300;
     letter-spacing: -0.03em;
 }
 
