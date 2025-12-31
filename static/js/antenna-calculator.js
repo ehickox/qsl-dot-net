@@ -112,7 +112,7 @@ function drawChart() {
 
     const width = 800;
     const height = 400;
-    const margin = { top: 30, right: 80, bottom: 60, left: 70 };
+    const margin = { top: 30, right: 90, bottom: 70, left: 80 };
     const chartWidth = width - margin.left - margin.right;
     const chartHeight = height - margin.top - margin.bottom;
 
@@ -154,7 +154,7 @@ function drawChart() {
         text.setAttribute('y', chartHeight + 25);
         text.setAttribute('text-anchor', 'middle');
         text.setAttribute('fill', '#cccccc');
-        text.setAttribute('font-size', '13px');
+        text.setAttribute('font-size', '16px');
         text.setAttribute('font-weight', '500');
         text.textContent = band;
         g.appendChild(text);
@@ -166,7 +166,7 @@ function drawChart() {
             freqText.setAttribute('y', chartHeight + 40);
             freqText.setAttribute('text-anchor', 'middle');
             freqText.setAttribute('fill', '#888');
-            freqText.setAttribute('font-size', '10px');
+            freqText.setAttribute('font-size', '13px');
             freqText.textContent = `${bands[band].low}-${bands[band].high} MHz`;
             g.appendChild(freqText);
         }
@@ -182,7 +182,7 @@ function drawChart() {
         text.setAttribute('y', y + 4);
         text.setAttribute('text-anchor', 'end');
         text.setAttribute('fill', '#cccccc');
-        text.setAttribute('font-size', '12px');
+        text.setAttribute('font-size', '15px');
         text.setAttribute('font-weight', '500');
         text.textContent = `${i} ft`;
         g.appendChild(text);
@@ -245,19 +245,19 @@ function drawChart() {
         // Length label with background
         const labelBg = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
         labelBg.setAttribute('x', chartWidth + 5);
-        labelBg.setAttribute('y', y - 10);
-        labelBg.setAttribute('width', '50');
-        labelBg.setAttribute('height', '16');
+        labelBg.setAttribute('y', y - 12);
+        labelBg.setAttribute('width', '70');
+        labelBg.setAttribute('height', '20');
         labelBg.setAttribute('fill', '#00ff00');
         labelBg.setAttribute('rx', '2');
         g.appendChild(labelBg);
 
         const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-        label.setAttribute('x', chartWidth + 30);
-        label.setAttribute('y', y + 2);
+        label.setAttribute('x', chartWidth + 40);
+        label.setAttribute('y', y + 4);
         label.setAttribute('text-anchor', 'middle');
         label.setAttribute('fill', '#000');
-        label.setAttribute('font-size', '11px');
+        label.setAttribute('font-size', '14px');
         label.setAttribute('font-weight', 'bold');
         label.textContent = `${userLength} ft`;
         g.appendChild(label);
